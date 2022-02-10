@@ -1,6 +1,6 @@
 """
 Program: Simple Calculator 
-Author: Anas Tawalbeh
+Author: Kuddari
 Simple calcuatro help the user calculate the basic 4 operations including:
 addition, subtraction, multiplication and division
 Significant constants
@@ -16,17 +16,46 @@ Significant constants
          computation result
 """
 
-number1=int(input("Insert the first value"))
-number2=int(input("Insert the second value"))
+total = 0
+cul = True
+user = input('Please enter your name :')
+while cul == True:
+      operation = str(input('Please type in the math operation you would like to complete: '))
+        
+      try:
+           number = int(input("Put your number: "))
+           if number == isinstance(number,int):
+                  break
+                  
+      except ValueError:
+            print('Hey',user,',you must enter a number')
+            continue
+            
 
-addition=number1+number2
-print(f"The sumation for the two values is equal to: ,{addition}")
+      if operation == '+':
+            print('{} + {}  '.format(total, number),'= ', total + number)
 
-subtraction=number1-number2
-print(f"The sumation for the two values is equal to: ,{subtraction}")
+            total = total + number
+      elif operation == '-':
+            print('{} - {}  '.format(total, number) ,'= ',(total - number))
+            total = total - number
 
-multiplication=number1*number2
-print(f"The sumation for the two values is equal to: ,{multiplication}")
+      elif operation == '*':
+            print('{} * {}  '.format(total, number) ,'= ',(total * number))
+            total = total * number
+      elif operation == '/':
+            print('{} / {}  '.format(total, number) ,'= ',(total / number))
+            total = total / number
 
-division=number1/number2
-print(f"The sumation for the two values is equal to: ,{division}")
+
+      else:
+            print('You have not typed a valid operator, please run the program again.')
+     
+      answer = input('''If you want to continue press 'Y' 
+      If you want to stop press 'N' : ''')
+      if answer =='Y':
+            cul = True
+      else:
+            cul = False
+print(user,',your final result is ', total)
+print('Thank YOU SO MUCH FOR USING MY SIMPLE PROGRAM,',user)
