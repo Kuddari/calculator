@@ -28,7 +28,7 @@ def num2():
 def newnum ():
     global new_num
     try:
-        new_num = float(input('Put your number : '))
+        new_num = float(input('Put new number that your want to calculates : '))
         if new_num == isinstance(new_num,float):
             newnum ()
     except ValueError :
@@ -70,7 +70,7 @@ def oprt():
                 print('{} / {} '.format(result, num_2),'= ', "{:.2f}".format(result / num_2))
                 result = result / num_2
     else :
-        print ("You must input operation value!!")
+        print ("Invalid operator. Try again!!")
         oprt ()
 
 def calculation ():
