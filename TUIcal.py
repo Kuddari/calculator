@@ -41,33 +41,33 @@ def oprt():
     if (operation == '+' or operation == '-' or operation == '*' or operation == '/'):
         if operation == '+':
             if result <= 0 :
-                print('{} + {} '.format(num_1, num_2),'= ', num_1 + num_2)
+                print('{} + {} '.format(num_1, num_2),'= ', "{:.2f}".format(num_1 + num_2))
                 result = num_1 + num_2
             else :
-                print('{} + {} '.format(result, num_2),'= ', result + num_2)
+                print('{} + {} '.format(result, num_2),'= ', "{:.2f}".format(result + num_2))
                 result = result + num_2
             
         elif operation == '-':
             if result <= 0 :
-                print('{} -{} '.format(num_1, num_2),'= ', num_1 - num_2)
+                print('{} -{} '.format(num_1, num_2),'= ', "{:.2f}".format(num_1 - num_2))
                 result = num_1 - num_2
             else :
-                print('{} - {} '.format(result, num_2),'= ', result - num_2)
+                print('{} - {} '.format(result, num_2),'= ', "{:.2f}".format(result - num_2))
                 result = result - num_2
 
         elif operation == '*':
             if result <= 0 :
-                print('{} * {} '.format(num_1, num_2),'= ', num_1 * num_2)
+                print('{} * {} '.format(num_1, num_2),'= ', "{:.2f}".format(num_1 * num_2))
                 result = num_1 * num_2
             else :
-                print('{} * {} '.format(result, num_2),'= ', result * num_2)
+                print('{} * {} '.format(result, num_2),'= ', "{:.2f}".format(result * num_2))
                 result = result * num_2
         elif operation == '/':
             if result <= 0 :
-                print('{} / {} '.format(num_1, num_2),'= ', num_1 / num_2)
+                print('{} / {} '.format(num_1, num_2),'= ', "{:.2f}".format(num_1 / num_2))
                 result = num_1 / num_2
             else :
-                print('{} / {} '.format(result, num_2),'= ', result / num_2)
+                print('{} / {} '.format(result, num_2),'= ', "{:.2f}".format(result / num_2))
                 result = result / num_2
     else :
         print ("You must input operation value!!")
@@ -91,7 +91,7 @@ if you want to stop 'N': """)
     if add.upper() == 'Y':
         continuecal ()
     else:
-        sys.exit("Thank You")
+        sys.exit("You're welcome,see you again")
 
 
 
